@@ -1,4 +1,4 @@
-# Update this hash so that each step has the name of a committee member associated with it (i.e. by adding an additional person key in each step hash), and each committee member has an equal number of tasks. Avoid typing out the committee members' names elsewhere in your code.
+// # Update this hash so that each step has the name of a committee member associated with it (i.e. by adding an additional person key in each step hash), and each committee member has an equal number of tasks. Avoid typing out the committee members' names elsewhere in your code.
 
 project = {
   committee: ["Stella", "Salma", "Kai"],
@@ -36,9 +36,8 @@ project = {
   ]
 }
 
-project[:steps].length.times do |n|
-  project[:steps][n][:person] = project[:committee][n%3]
-end
+for (var i = 0; i < project.steps.length; i++) {
+  project.steps[i].person = project.committee[i%3]
+}
 
-
-p project
+console.log(project);
